@@ -34,6 +34,13 @@
             this.rbStaff = new System.Windows.Forms.RadioButton();
             this.bMoveToHours = new System.Windows.Forms.Button();
             this.bClear = new System.Windows.Forms.Button();
+            this.HoursParked = new System.Windows.Forms.Label();
+            this.tbHours = new System.Windows.Forms.TextBox();
+            this.bExit = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelParkingInfo = new System.Windows.Forms.Label();
+            this.labelParkingAmount = new System.Windows.Forms.Label();
+            this.bCalculate = new System.Windows.Forms.Button();
             this.customerOrStaff.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,12 +90,13 @@
             // 
             // bMoveToHours
             // 
-            this.bMoveToHours.Location = new System.Drawing.Point(456, 318);
+            this.bMoveToHours.Location = new System.Drawing.Point(533, 320);
             this.bMoveToHours.Name = "bMoveToHours";
             this.bMoveToHours.Size = new System.Drawing.Size(164, 46);
             this.bMoveToHours.TabIndex = 2;
             this.bMoveToHours.Text = "Next";
             this.bMoveToHours.UseVisualStyleBackColor = true;
+            this.bMoveToHours.Click += new System.EventHandler(this.bMoveToHours_Click);
             // 
             // bClear
             // 
@@ -98,12 +106,84 @@
             this.bClear.TabIndex = 3;
             this.bClear.Text = "Clear";
             this.bClear.UseVisualStyleBackColor = true;
+            this.bClear.Click += new System.EventHandler(this.bClear_Click);
+            // 
+            // HoursParked
+            // 
+            this.HoursParked.AutoSize = true;
+            this.HoursParked.Location = new System.Drawing.Point(285, 553);
+            this.HoursParked.Name = "HoursParked";
+            this.HoursParked.Size = new System.Drawing.Size(143, 25);
+            this.HoursParked.TabIndex = 5;
+            this.HoursParked.Text = "Hours Parked";
+            // 
+            // tbHours
+            // 
+            this.tbHours.Enabled = false;
+            this.tbHours.Location = new System.Drawing.Point(499, 550);
+            this.tbHours.MaxLength = 2;
+            this.tbHours.Name = "tbHours";
+            this.tbHours.Size = new System.Drawing.Size(215, 31);
+            this.tbHours.TabIndex = 6;
+            // 
+            // bExit
+            // 
+            this.bExit.Location = new System.Drawing.Point(984, 718);
+            this.bExit.Name = "bExit";
+            this.bExit.Size = new System.Drawing.Size(199, 65);
+            this.bExit.TabIndex = 7;
+            this.bExit.Text = "Exit";
+            this.bExit.UseVisualStyleBackColor = true;
+            this.bExit.Click += new System.EventHandler(this.bExit_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(533, 675);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(164, 25);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Parking Amount";
+            // 
+            // labelParkingInfo
+            // 
+            this.labelParkingInfo.AutoSize = true;
+            this.labelParkingInfo.Location = new System.Drawing.Point(285, 378);
+            this.labelParkingInfo.Name = "labelParkingInfo";
+            this.labelParkingInfo.Size = new System.Drawing.Size(0, 25);
+            this.labelParkingInfo.TabIndex = 10;
+            // 
+            // labelParkingAmount
+            // 
+            this.labelParkingAmount.AutoSize = true;
+            this.labelParkingAmount.Location = new System.Drawing.Point(577, 675);
+            this.labelParkingAmount.Name = "labelParkingAmount";
+            this.labelParkingAmount.Size = new System.Drawing.Size(0, 25);
+            this.labelParkingAmount.TabIndex = 11;
+            // 
+            // bCalculate
+            // 
+            this.bCalculate.Enabled = false;
+            this.bCalculate.Location = new System.Drawing.Point(523, 599);
+            this.bCalculate.Name = "bCalculate";
+            this.bCalculate.Size = new System.Drawing.Size(155, 46);
+            this.bCalculate.TabIndex = 12;
+            this.bCalculate.Text = "Calculate";
+            this.bCalculate.UseVisualStyleBackColor = true;
+            this.bCalculate.Click += new System.EventHandler(this.bCalculate_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1195, 795);
+            this.Controls.Add(this.bCalculate);
+            this.Controls.Add(this.labelParkingAmount);
+            this.Controls.Add(this.labelParkingInfo);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.bExit);
+            this.Controls.Add(this.tbHours);
+            this.Controls.Add(this.HoursParked);
             this.Controls.Add(this.bClear);
             this.Controls.Add(this.bMoveToHours);
             this.Controls.Add(this.customerOrStaff);
@@ -125,6 +205,13 @@
         private System.Windows.Forms.RadioButton rbCustomer;
         private System.Windows.Forms.Button bMoveToHours;
         private System.Windows.Forms.Button bClear;
+        private System.Windows.Forms.Label HoursParked;
+        private System.Windows.Forms.TextBox tbHours;
+        private System.Windows.Forms.Button bExit;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelParkingInfo;
+        private System.Windows.Forms.Label labelParkingAmount;
+        private System.Windows.Forms.Button bCalculate;
     }
 }
 

@@ -29,7 +29,7 @@ namespace ParkingKiosk
 
         public override string ParkingInfo()
         {
-            throw new System.NotImplementedException();
+            return "Parking Price \r\n $2.00 for 10 hours \r\n $2.00 per hour after 10 hours \r\n Max parking time: 24 hours";
         }
     }
 

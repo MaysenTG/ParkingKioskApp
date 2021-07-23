@@ -7,7 +7,7 @@ namespace ParkingKiosk
 {
     public class ParkingException : ApplicationException
     {
-        public string Message
+        public override string Message
         {
             get
             {
