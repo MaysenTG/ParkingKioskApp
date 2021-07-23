@@ -25,7 +25,7 @@ namespace ParkingKiosk
 
         public override string ParkingInfo()
         {
-            return "Parking Price \r\n $2.00 per hour \r\nsssssssss Max parking time: 24 hours";
+            return "Parking Price \r\n $2.00 per hour \r\n Max parking time: 24 hours";
         }
     }
 }

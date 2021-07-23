@@ -12,6 +12,7 @@ namespace ParkingKiosk
 {
     public partial class Form1 : Form
     {
+        public ParkingType myObj;
         public Form1()
         {
             InitializeComponent();
@@ -29,14 +30,14 @@ namespace ParkingKiosk
         {
             if(rbCustomer.Checked)
             {
-                CustomerParking newCustomer = new CustomerParking();
-                labelParkingInfo.Text = newCustomer.ParkingInfo();
+                myObj = new CustomerParking();
+                labelParkingInfo.Text = myObj.ParkingInfo();
                 stepTwo();
             }
              else if(rbStaff.Checked)
             {
-                StaffParking newStaff = new StaffParking();
-                labelParkingInfo.Text = newStaff.ParkingInfo();
+                myObj = new StaffParking();
+                labelParkingInfo.Text = myObj.ParkingInfo();
                 stepTwo();
 
             } else
@@ -64,18 +65,27 @@ namespace ParkingKiosk
 
         private void bCalculate_Click(object sender, EventArgs e)
         {
-            if (rbCustomer.Checked)
+            if (tbHours.Text != "")
             {
-                CustomerParking newCustomer = new CustomerParking();
-                double totalCost = newCustomer.Calculate(Double.Parse(tbHours.Text));
-                labelParkingAmount.Text += "\r\n" + totalCost.ToString();
+                try
+                {
+                    double totalCost = myObj.Calculate(Double.Parse(tbHours.Text));
+                    labelParkingAmount.Text = totalCost.ToString();
+                }
+                catch (ParkingException pe)
+                {
+                    MessageBox.Show(pe.Message);
+                }
             }
-            else if (rbStaff.Checked)
+            else
             {
-                StaffParking newStaff = new StaffParking();
-                double totalCost = newStaff.Calculate(Double.Parse(tbHours.Text));
-                labelParkingAmount.Text += "\r\n" + totalCost.ToString();
+                MessageBox.Show("Enter a value!");
             }
+        }
+
+        private void labelParkingAmount_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

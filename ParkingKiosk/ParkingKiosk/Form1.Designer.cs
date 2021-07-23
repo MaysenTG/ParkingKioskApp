@@ -37,10 +37,10 @@
             this.HoursParked = new System.Windows.Forms.Label();
             this.tbHours = new System.Windows.Forms.TextBox();
             this.bExit = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.labelParkingInfo = new System.Windows.Forms.Label();
             this.labelParkingAmount = new System.Windows.Forms.Label();
             this.bCalculate = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.customerOrStaff.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -136,15 +136,6 @@
             this.bExit.UseVisualStyleBackColor = true;
             this.bExit.Click += new System.EventHandler(this.bExit_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(533, 675);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 25);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Parking Amount";
-            // 
             // labelParkingInfo
             // 
             this.labelParkingInfo.AutoSize = true;
@@ -156,10 +147,11 @@
             // labelParkingAmount
             // 
             this.labelParkingAmount.AutoSize = true;
-            this.labelParkingAmount.Location = new System.Drawing.Point(577, 675);
+            this.labelParkingAmount.Location = new System.Drawing.Point(576, 703);
             this.labelParkingAmount.Name = "labelParkingAmount";
             this.labelParkingAmount.Size = new System.Drawing.Size(0, 25);
             this.labelParkingAmount.TabIndex = 11;
+            this.labelParkingAmount.Click += new System.EventHandler(this.labelParkingAmount_Click);
             // 
             // bCalculate
             // 
@@ -172,15 +164,24 @@
             this.bCalculate.UseVisualStyleBackColor = true;
             this.bCalculate.Click += new System.EventHandler(this.bCalculate_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(518, 662);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(164, 25);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Parking Amount";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1195, 795);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.bCalculate);
             this.Controls.Add(this.labelParkingAmount);
             this.Controls.Add(this.labelParkingInfo);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.bExit);
             this.Controls.Add(this.tbHours);
             this.Controls.Add(this.HoursParked);
@@ -208,10 +209,10 @@
         private System.Windows.Forms.Label HoursParked;
         private System.Windows.Forms.TextBox tbHours;
         private System.Windows.Forms.Button bExit;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelParkingInfo;
         private System.Windows.Forms.Label labelParkingAmount;
         private System.Windows.Forms.Button bCalculate;
+        private System.Windows.Forms.Label label3;
     }
 }
 
