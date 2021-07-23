@@ -70,7 +70,7 @@ namespace ParkingKiosk
                 try
                 {
                     double totalCost = myObj.Calculate(Double.Parse(tbHours.Text));
-                    labelParkingAmount.Text = totalCost.ToString();
+                    labelParkingAmount.Text = "$"+totalCost.ToString();
                 }
                 catch (ParkingException pe)
                 {
